@@ -1,0 +1,137 @@
+{
+   "checksum": "8d588580cebc22feff9f77ee530833a6",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13330707829000000",
+            "date_last_used": "0",
+            "guid": "fd8a8118-2898-403d-8b2f-018c20a22941",
+            "id": "14",
+            "name": "Getting Started",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.mozilla.org/en-US/firefox/central/",
+            "visit_count": 0
+         } ],
+         "date_added": "13380305945379786",
+         "date_last_used": "0",
+         "date_modified": "13330707829000000",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13330707828000000",
+                  "date_last_used": "0",
+                  "guid": "dc897bc8-a82b-4952-8fca-567bad6868be",
+                  "id": "8",
+                  "name": "Help and Tutorials",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/en-US/products/firefox",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13330707828000000",
+                  "date_last_used": "0",
+                  "guid": "05c6b126-53f4-441d-977f-5a1f035331ef",
+                  "id": "9",
+                  "name": "Customize Firefox",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13330707828000000",
+                  "date_last_used": "0",
+                  "guid": "bfae5aae-0bf0-43ba-b428-65817bb140c6",
+                  "id": "10",
+                  "name": "Get Involved",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/en-US/contribute/",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13330707828000000",
+                  "date_last_used": "0",
+                  "guid": "6741c63d-41d4-41be-b74d-a5b6b0163fef",
+                  "id": "11",
+                  "name": "About Us",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/en-US/about/",
+                  "visit_count": 0
+               } ],
+               "date_added": "13342987847064297",
+               "date_last_used": "0",
+               "date_modified": "13342987847064297",
+               "guid": "a02f8dc1-0771-4f51-877d-d7fac8636367",
+               "id": "7",
+               "name": "Mozilla Firefox",
+               "source": "unknown",
+               "type": "folder"
+            } ],
+            "date_added": "13342987847064284",
+            "date_last_used": "0",
+            "date_modified": "13342987847064284",
+            "guid": "421f5f40-a786-4435-93ba-c60dd5e7879d",
+            "id": "6",
+            "name": "Mozilla Firefox Bookmarks Menu",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "date_added": "13330891451000000",
+            "date_last_used": "0",
+            "guid": "207d0295-14d4-4001-abe1-965f008cf2dd",
+            "id": "12",
+            "name": "GTA 5 Cheats PC: All Cheat Codes for GTA 5 on the PC | Gadgets 360",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.gadgets360.com/games/features/gta-5-cheats-pc-pdf-code-codes-2014868",
+            "visit_count": 0
+         }, {
+            "date_added": "13330894210000000",
+            "date_last_used": "0",
+            "guid": "8560fe9a-6f35-47b5-b6d3-37bffbd608ba",
+            "id": "13",
+            "name": "GTA 5 Real Life Mod - Download",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://gta-5-real-life-mod.en.softonic.com/",
+            "visit_count": 0
+         } ],
+         "date_added": "13380305945379794",
+         "date_last_used": "0",
+         "date_modified": "13330894210000000",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13380305945379799",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCG7HpyeUAQAAKg4QABgBIAAoBTAAOABAABIAKhhudUxNcFkwT2pZb0pzSXZaWWk2NndRPT1IA6AGDBKsAQgHEqcBChxNUHJtdk5qdVJCQUpaT3lNK0s1WlJQRlcra2M9EiRhMDJmOGRjMS0wNzcxLTRmNTEtODc3ZC1kN2ZhYzg2MzYzNjcYACAAKAAw4uHq6LgxOK/m6ui4MUCv5urouDFKHEllV1NJWDVLcHRPQm5pcjJPY3kzVkZvYk45bz1aHiIcWFBJcEFrbVRmemZtSzdJbVR0ZFowZ2FWM2JRPWUAAAAAwj4CYAASjgEIARKJAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRIkYmVlZWVlMDYtNGE4OC01NTRhLWI2MWYtMzdkOWMwOGU3YWZmGAAgACgAMKf5qr/OMDj0/Kq/zjBA9Pyqv84wShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAAMI+AmAAEq0BCA0SqAEKHFdmTC9RUW9hdzlnaHh2MWx1V1oxclkwVDNXVT0SJDg1NjBmZTlhLTZmMzUtNDdiNS1iNmQzLTM3YmZmYmQ2MDhiYRgAIAAoADDg4erouDE46+Xq6LgxQOvl6ui4MUocZGoybWFuei9ROUJJUEJLcHQrM3ZvMjZJdUxNPVofIh2xQ00vaFNVL1d1RTY5eXZOK3F5TFNlMlNqSXhrPWWdsJoxwj4CYAUSrAEICBKnAQocWGhqVzRMZFJEbjdMVVN4T2FEcmFRK0hyMFZjPRIkZGM4OTdiYzgtYTgyYi00OTUyLThmY2EtNTY3YmFkNjg2OGJlGAAgACgAMOPh6ui4MTjO5urouDFAzubq6LgxShwySXZhem16Q3dUdlpXTTdyMHJab2Z5NWQ2QW89Wh4iHGZHNEJ3SEJidHlQQ1JiOFdvYS9sUFFzLys0MD1lT6RJPMI+AmAFEq0BCAsSqAEKHEZhbHI0T01QUWVmdmd4MFNxY2pOcmxVNU1Kcz0SJDY3NDFjNjNkLTQxZDQtNDFiZS1iNzRkLWE1YjZiMDE2M2ZlZhgAIAAoADDm4erouDE4qufq6LgxQKrn6ui4MUocazBQUk9UVHNxMUlub1RzTFdORDUrQ3JZd1pZPVofIh3bZ2JUeDh3T3lIZjZiNEorV3hBYmJVWXYyNFZ3PWUAAAAAwj4CYAUSrQEIChKoAQocNFA4N2Z2QWc0UGJwT2lHd08vaG1Ic2IwTk5JPRIkYmZhZTVhYWUtMGJmMC00M2JhLWI0MjgtNjU4MTdiYjE0MGM2GAAgACgAMOXh6ui4MTiM5+rouDFAjOfq6LgxShxFeS8vaFYreHdZcHdITGpITmlBVndmU0lMMVU9Wh8iHbdCdVdIRjM5RFp6VVBleisyZkRPcnFrQXYxMms9ZQAAAADCPgJgBRKsAQgMEqcBChx2OFNBNldpOWF0WUpJNWhCSHEwZFViQzg0MnM9EiQyMDdkMDI5NS0xNGQ0LTQwMDEtYWJlMS05NjVmMDA4Y2YyZGQYACAAKAAw3+Hq6LgxOMzl6ui4MUDM5erouDFKHEI2SkRpVUJLU3lRK1BlVXVJdFVyV0Z2TzFtRT1aHiIcY0NQbHhURk41bDRYRmMzUXdQRUx1Z2dMSUNJPWUAAAAAwj4CYAUSrAEICRKnAQocOW1lT3R3Q0IyMlJYbkRkMXgyQzRRVFkxWGNrPRIkMDVjNmIxMjYtNTNmNC00NDFkLTk3N2YtNWExZjAzNTMzMWVmGAAgACgAMOTh6ui4MTjv5urouDFA7+bq6LgxShxYRFBnTFEwVUdYYUJldlJVTXcxVXJDczR0elE9Wh4iHG95cnNXUjlSTXdDNGNTNTkrZjUyY3dDQmsxYz1lT6RJPMI+AmAFEqwBCA4SpwEKHHhHL0YrRys0ZTZyRmNORnFRbUxpRG8xWURnaz0SJGZkOGE4MTE4LTI4OTgtNDAzZC04YjJmLTAxOGMyMGEyMjk0MRgAIAAoADDe4erouDE4p+Xq6LgxQKfl6ui4MUocOS9vVk5QUDA5ZkZQc1FZeWdTWW5ER0dvajVZPVoeIhxtRnR4clZqc3pCZDF3RTcyYStLQUs5dTVHbFk9ZU+kSTzCPgJgBRKOAQgCEokBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiQzNTQzMmFkYi1jZDVmLTU0ZGItOGE1Mi0zNDE3YzJhNTVjMmIYACAAKAAwp/mqv84wOJT9qr/OMECU/aq/zjBKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAwj4CYAASrAEIBhKnAQocYTNERURpVEtTT3A0eVEyenlaUkE1S1oyMy80PRIkNDIxZjVmNDAtYTc4Ni00NDM1LTkzYmEtYzYwZGQ1ZTc4NzlkGAAgACgAMOHh6ui4MTiL5urouDFAi+bq6LgxShxld2FnL2ZYYzhTOVpqUVE4ZGtJc1Jhd3BXNDA9Wh4iHEhuRysxNmd3b2RZQU1sOGdGOWEzMDZkcktCaz1lAAAAAMI+AmAAEo4BCAMSiQEKHG5qZ0R1ODhlQ3J2WHA4NnBEN2ZIR2NxRnA4OD0SJDE3NDA0MDM0LWM1YTQtNTEzZS1iNTM2LTZiMzc1MWQ3YmNmNRgAIAAoADCn+aq/zjA4gf6qv84wQIH+qr/OMEoceXpOQjAxY241NEE3Y1JVMHVUKy9QZ21UdFVvPVoAZQAAAADCPgJgADAAOAA=",
+   "version": 1
+}
