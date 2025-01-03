@@ -224,6 +224,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "persistent_bottom_nav_bar",
+      "rootUri": "file:///C:/Users/JOHN/AppData/Local/Pub/Cache/hosted/pub.dev/persistent_bottom_nav_bar-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "platform",
       "rootUri": "file:///C:/Users/JOHN/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.6",
       "packageUri": "lib/",
@@ -338,7 +344,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-01-02T18:28:58.206063Z",
+  "generated": "2025-01-03T14:13:01.987023Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/Users/JOHN/Desktop/PRK/flutter",

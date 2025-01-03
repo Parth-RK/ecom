@@ -8,7 +8,6 @@ import 'user_form_screen.dart';
 import 'post_detail_screen.dart';
 import 'audio_player_screen.dart';
 
-// lib/screens/post_list_screen.dart
 class PostListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -114,10 +113,9 @@ class PostListScreen extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => UserFormScreen()),
-        ),
+        onPressed: () {
+          // Show user form dialog or modal instead of navigation
+        },
         child: Icon(Icons.add),
       ),
     );
