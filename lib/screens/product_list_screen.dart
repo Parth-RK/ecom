@@ -3,9 +3,67 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/product_bloc.dart';
 import 'product_details_screen.dart';
 
-class ProductListScreen extends StatelessWidget {
+class ProductListScreen extends StatefulWidget {
+  @override
+  _ProductListScreenState createState() => _ProductListScreenState();
+}
+
+class _ProductListScreenState extends State<ProductListScreen> {
+  final _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(_onScroll);
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void _onScroll() {
+    if (_isNearBottom) {
+      context.read<ProductBloc>().loadMoreProducts();
+    }
+  }
+
+  bool get _isNearBottom {
+    if (!_scrollController.hasClients) return false;
+    final maxScroll = _scrollController.position.maxScrollExtent;
+    final currentScroll = _scrollController.offset;
+    return currentScroll >= (maxScroll * 0.9);
+  }
+
   @override
   Widget build(BuildContext context) {
+    // Get screen width to calculate grid properties
+    final screenWidth = MediaQuery.of(context).size.width;
+    
+    // Calculate number of columns based on screen width
+    int crossAxisCount;
+    double childAspectRatio;
+    double padding;
+    
+    if (screenWidth > 1200) {
+      crossAxisCount = 6;
+      childAspectRatio = 0.8;
+      padding = 16;
+    } else if (screenWidth > 900) {
+      crossAxisCount = 4;
+      childAspectRatio = 0.75;
+      padding = 12;
+    } else if (screenWidth > 600) {
+      crossAxisCount = 3;
+      childAspectRatio = 0.7;
+      padding = 8;
+    } else {
+      crossAxisCount = 2;
+      childAspectRatio = 0.65;
+      padding = 8;
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Shop Now'),
@@ -22,15 +80,26 @@ class ProductListScreen extends StatelessWidget {
               
             case ProductStatus.success:
               return GridView.builder(
-                padding: EdgeInsets.all(8),
+                controller: _scrollController,
+                padding: EdgeInsets.all(padding),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 0.7,
-                  crossAxisSpacing: 8,
-                  mainAxisSpacing: 8,
+                  crossAxisCount: crossAxisCount,
+                  childAspectRatio: childAspectRatio,
+                  crossAxisSpacing: padding,
+                  mainAxisSpacing: padding,
                 ),
-                itemCount: state.products.length,
+                itemCount: state.products.length + (state.isLoadingMore ? 1 : 0),
                 itemBuilder: (context, index) {
+                  if (index >= state.products.length) {
+                    return Center(
+                      child: SizedBox(
+                        height: 24,
+                        width: 24,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      ),
+                    );
+                  }
+
                   final product = state.products[index];
                   return InkWell(
                     onTap: () {
@@ -47,6 +116,7 @@ class ProductListScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
+                            flex: 3, // Adjust image container size ratio
                             child: Stack(
                               children: [
                                 Hero(
@@ -76,52 +146,67 @@ class ProductListScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  product.title,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                                SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Container(
-                                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                                      decoration: BoxDecoration(
-                                        color: Colors.green,
-                                        borderRadius: BorderRadius.circular(4),
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            '${product.rating}',
-                                            style: TextStyle(color: Colors.white, fontSize: 12),
-                                          ),
-                                          Icon(Icons.star, color: Colors.white, size: 12),
-                                        ],
-                                      ),
+                          Expanded(
+                            flex: 2, // Adjust content container size ratio
+                            child: Padding(
+                              padding: EdgeInsets.all(8),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    product.title,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: screenWidth > 600 ? 14 : 12,
                                     ),
-                                    SizedBox(width: 4),
-                                    Text(
-                                      '(${product.reviewCount})',
-                                      style: TextStyle(color: Colors.grey, fontSize: 12),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4),
-                                Text(
-                                  '₹${product.price.toStringAsFixed(2)}',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
                                   ),
-                                ),
-                              ],
+                                  Spacer(),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                                        decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          borderRadius: BorderRadius.circular(4),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              '${product.rating}',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: screenWidth > 600 ? 12 : 10,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.white,
+                                              size: screenWidth > 600 ? 12 : 10,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(width: 4),
+                                      Text(
+                                        '(${product.reviewCount})',
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: screenWidth > 600 ? 12 : 10,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 4),
+                                  Text(
+                                    '₹${product.price.toStringAsFixed(2)}',
+                                    style: TextStyle(
+                                      fontSize: screenWidth > 600 ? 16 : 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
